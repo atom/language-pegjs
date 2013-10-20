@@ -1,0 +1,17 @@
+{
+  "name": "language-pegjs",
+  "version": "0.0.0",
+  "description": "PEG.js language support in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://atom.github.io/language-pegjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/language-pegjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/language-pegjs/issues"
+  }
+}
