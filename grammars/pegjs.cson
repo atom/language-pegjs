@@ -1,0 +1,142 @@
+'fileTypes': [
+  'pegjs'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'PEGjs'
+'patterns': [
+  {
+    'include': '#commentBlock'
+  }
+  {
+    'include': '#commentLine'
+  }
+  {
+    'include': '#docCommentLine'
+  }
+  {
+    'include': '#exprLabel'
+  }
+  {
+    'include': '#pegOperator'
+  }
+  {
+    'include': '#charSet'
+  }
+  {
+    'include': '#literalDouble'
+  }
+  {
+    'include': '#literalSingle'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.type'
+      '2':
+        'name': 'comment.line.double-slash'
+    'match': '^([a-zA-Z$_][a-zA-Z$_0-9]*)[\\t ]*(".*")[\\t ]*=?'
+    'name': 'source.pegjs.ruleDefinition'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.type'
+      '2':
+        'name': 'comment.line.double-slash'
+    'match': '^([a-zA-Z$_][a-zA-Z$_0-9]*)[\\t ]*(\'.*\')[\\t ]*=?'
+    'name': 'source.pegjs.ruleDefinition'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.type'
+    'match': '^([a-zA-Z_][a-zA-Z$_0-9]*)[\\s\\t]*=?'
+    'name': 'source.pegjs.ruleDefinition'
+  }
+  {
+    'include': '#scriptblock'
+  }
+]
+'repository':
+  'charSet':
+    'begin': '\\['
+    'end': '\\]'
+    'name': 'keyword.operator'
+  'commentBlock':
+    'begin': '/\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.pegjs'
+    'end': '\\*/'
+    'name': 'comment.block'
+  'commentLine':
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.js'
+    'match': '(//).*$\\n?'
+    'name': 'comment.line.double-slash.js'
+  'docCommentBlock':
+    'begin': '/\\*\\*(?!/)'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.pegjs'
+    'end': '\\*/'
+    'name': 'comment.block.documentation.peg'
+  'exprLabel':
+    'match': '[a-zA-Z$_][a-zA-Z$_0-9]*:'
+    'name': 'variable.parameter'
+  'literalDouble':
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.pegjs'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.pegjs'
+    'name': 'string.quoted.double.pegjs'
+    'patterns': [
+      {
+        'match': '\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
+        'name': 'constant.character.escape.pegjs'
+      }
+    ]
+  'literalSingle':
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.pegjs'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.pegjs'
+    'name': 'string.quoted.single.js'
+    'patterns': [
+      {
+        'match': '\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+        'name': 'constant.character.escape.js'
+      }
+    ]
+  'pegOperator':
+    'match': '[/.+*?&!=]'
+    'name': 'keyword.operator'
+  'rule':
+    'match': '[a-zA-Z$_][a-zA-Z$_0-9]*'
+    'name': 'entity.name.type'
+  'ruleDef':
+    'match': '[_a-zA-Z$_][a-zA-Z$_0-9]*'
+    'name': 'entity.name.type'
+  'scriptblock':
+    'begin': '\\{'
+    'end': '\\}'
+    'name': 'source.js.embedded.pegjs'
+    'patterns': [
+      {
+        'include': '#scriptblock'
+      }
+      {
+        'include': 'source.js'
+      }
+    ]
+'scopeName': 'source.pegjs'
