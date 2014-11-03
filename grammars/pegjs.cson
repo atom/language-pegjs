@@ -1,9 +1,10 @@
+'scopeName': 'source.pegjs'
+'name': 'PEGjs'
 'fileTypes': [
   'pegjs'
 ]
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
 'foldingStopMarker': '\\*\\*/|^\\s*\\}'
-'name': 'PEGjs'
 'patterns': [
   {
     'include': '#commentBlock'
@@ -139,4 +140,3 @@
         'include': 'source.js'
       }
     ]
-'scopeName': 'source.pegjs'

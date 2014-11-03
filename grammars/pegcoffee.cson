@@ -1,9 +1,10 @@
+'scopeName': 'source.pegcoffee'
+'name': 'PEGcoffee'
 'fileTypes': [
   'pegcoffee'
 ]
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
 'foldingStopMarker': '\\*\\*/|^\\s*\\}'
-'name': 'PEGcoffee'
 'patterns': [
   {
     'include': '#commentBlock'
@@ -139,4 +140,3 @@
         'include': 'source.coffee'
       }
     ]
-'scopeName': 'source.pegcoffee'
