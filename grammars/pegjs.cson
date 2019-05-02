@@ -62,8 +62,26 @@
 'repository':
   'charSet':
     'begin': '\\['
-    'end': '\\]'
+    'end': '\\](i?)'
+    'beginCaptures':
+      '0':
+        'name': 'keyword.operator'
+    'endCaptures':
+      '0':
+        'name': 'keyword.operator'
+      '1':
+        'name': 'constant.character.control.regexp'
     'name': 'keyword.operator'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.pegjs'
+      },
+      {
+        'match': '[^\\n\\r]'
+        'name': 'constant.character'
+      }
+    ]
   'commentBlock':
     'begin': '/\\*'
     'captures':
