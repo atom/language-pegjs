@@ -74,12 +74,12 @@
     'name': 'keyword.operator'
     'patterns': [
       {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.pegjs'
-      },
-      {
-        'match': '[^\\n\\r]'
-        'name': 'constant.character'
+        'match': '(\\\\.)|([^\\n\\r\\]])'
+        'captures':
+          '1':
+            'name': 'constant.character.escape.pegjs'
+          '2':
+            'name': 'constant.character'
       }
     ]
   'commentBlock':
