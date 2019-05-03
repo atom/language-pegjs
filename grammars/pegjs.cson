@@ -62,15 +62,13 @@
 'repository':
   'charSet':
     'begin': '\\['
-    'end': '\\](i?)'
     'beginCaptures':
       '0':
         'name': 'keyword.operator'
+    'end': '\\](i?)'
     'endCaptures':
       '0':
         'name': 'keyword.operator'
-      '1':
-        'name': 'constant.character.control.regexp'
     'name': 'keyword.operator'
     'patterns': [
       {
