@@ -70,10 +70,12 @@
     'begin': '\\['
     'beginCaptures':
       '0':
-        'name': 'keyword.operator'
+        'name': 'meta.brace.square'
     'end': '\\](i?)'
     'endCaptures':
       '0':
+        'name': 'meta.brace.square'
+      '1':
         'name': 'keyword.operator'
     'name': 'keyword.operator'
     'patterns': [
@@ -105,7 +107,7 @@
       '0':
         'name': 'punctuation.definition.comment.pegjs'
     'end': '\\*/'
-    'name': 'comment.block.documentation.peg'
+    'name': 'comment.block.documentation.pegjs'
   'exprLabel':
     'match': '[a-zA-Z$_][a-zA-Z$_0-9]*:'
     'name': 'variable.parameter'
@@ -114,10 +116,12 @@
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.begin.pegjs'
-    'end': '"'
+    'end': '"(i?)'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.pegjs'
+      '1':
+        'name': 'keyword.operator'
     'name': 'string.quoted.double.pegjs'
     'patterns': [
       {
@@ -130,10 +134,12 @@
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.begin.pegjs'
-    'end': '\''
+    'end': '\'(i?)'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.pegjs'
+      '1':
+        'name': 'keyword.operator'
     'name': 'string.quoted.single.js'
     'patterns': [
       {
